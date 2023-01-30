@@ -1,13 +1,17 @@
 const express = require("express");
-
 const router = express.Router();
+const database = require("../database"); // si besoin
 
-const itemControllers = require("./controllers/itemControllers");
+const structure = require("./controllers/structure.controllers");
+// ajouter les controllers ICI
 
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
+router.get("/structure", structure.getAllStructures);
+router.get("/structure/:id", structure.getStructureById);
+
+router.post("/structure", structure.postStructure);
+
+router.put("/structure/:id", structure.updateStructureById);
+
+router.delete("/structure/:id", structure.deleteStructureById);
 
 module.exports = router;

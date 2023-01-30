@@ -1,36 +1,23 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+import React from "react";
 
-export default function Home() {
+const Home = () => {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div className="home">
+      <h1>Hello World</h1>
+      <h2>Hello World</h2>
+      <h3>Hello World</h3>
+      <h4>Hello World</h4>
+      <br />
+      <div className="first"></div>
+      <div className="second"></div>
+      <div className="third"></div>
+      <div className="fourth"></div>
+      <div className="fifth"></div>
+      <br />
+      <p>there is sass and browserRouter</p>
+      <p>try /details</p>
+    </div>
   );
-}
+};
+
+export default Home;
