@@ -1,7 +1,7 @@
 import React from "react";
 
-const Details = () => {
+function Details() {
   return <div>Details Page - router work</div>;
-};
+}
 
 export default Details;
