@@ -2,12 +2,22 @@ const structureModels = require("../models/structure.models.js");
 
 const getAllStructures = async (req, res) => {
   const result = await structureModels.getAllStructures(req);
-  return res.json(result);
+  if (result.length !== 0) {
+    return res.json(result);
+  } else {
+    console.error(err);
+    res.sendStatus(500);
+  }
 };
 
 const getStructureById = async (req, res) => {
   const result = await structureModels.getStructureById(req);
-  return res.json(result);
+  if (result.length !== 0) {
+    return res.json(result);
+  } else {
+    console.error(err);
+    res.sendStatus(500);
+  }
 };
 
 const updateStructureById = async (req, res) => {
@@ -26,7 +36,11 @@ const postStructure = async (req, res) => {
 
 const deleteStructureById = async (req, res) => {
   const result = await structureModels.deleteStructureById(req);
-  return res.json(result);
+  if (result.affectedRows === 0) {
+    res.sendStatus(404);
+  } else {
+    res.sendStatus(204);
+  }
 };
 
 module.exports = {
