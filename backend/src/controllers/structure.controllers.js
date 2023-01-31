@@ -1,23 +1,19 @@
-const structureModels = require("../models/structure.models.js");
+const structureModels = require("../models/structure.models");
 
 const getAllStructures = async (req, res) => {
   const result = await structureModels.getAllStructures(req);
-  if (result.length !== 0) {
-    return res.json(result);
-  } else {
-    console.error(err);
+  if (result.length === 0) {
     res.sendStatus(500);
   }
+  return res.json(result);
 };
 
 const getStructureById = async (req, res) => {
   const result = await structureModels.getStructureById(req);
-  if (result.length !== 0) {
-    return res.json(result);
-  } else {
-    console.error(err);
+  if (result.length === 0) {
     res.sendStatus(500);
   }
+  return res.json(result);
 };
 
 const updateStructureById = async (req, res) => {

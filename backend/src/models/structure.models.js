@@ -32,7 +32,7 @@ const postStructure = async (req) => {
 };
 
 const deleteStructureById = async (req) => {
-  const id = parseInt(req.params.id);
+  const { id } = req.params;
 
   const [result] = await database.query("DELETE FROM movies WHERE id=?", [id]);
   return result;

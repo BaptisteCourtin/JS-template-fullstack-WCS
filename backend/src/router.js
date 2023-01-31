@@ -1,6 +1,7 @@
 const express = require("express");
+
 const router = express.Router();
-const database = require("../database"); // si besoin
+// const database = require("../database"); // si besoin
 
 const structure = require("./controllers/structure.controllers");
 // ajouter les controllers ICI
