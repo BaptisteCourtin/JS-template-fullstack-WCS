@@ -1,0 +1,104 @@
+.contactForm {
+    height: 60vh;
+    background-color: $black;
+    color: $white;
+    width: 100%;
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+        margin: 20px;
+        font-size: $h3;
+    }
+
+
+    .formContainer {
+        margin-top: 20px;
+        padding: 50px;
+        border: solid 3px $first;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: repeat(3, 1fr);
+        gap: 20px;
+        width: 100%;
+
+
+        .divName {
+            grid-column: 1;
+            grid-row: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 80%;
+
+            #userName {
+                padding: 5px;
+            }
+        }
+
+        .divFirstName {
+            grid-column: 2;
+            grid-row: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            #userFirstName {
+                padding: 5px;
+            }
+        }
+
+        .divMail {
+            grid-column: 1/3;
+            grid-row: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            #userMail {
+                padding: 5px;
+            }
+        }
+
+        .divMessage {
+            grid-column: 1/3;
+            grid-row: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            #formulaireMessage {
+                height: 100px;
+                padding: 5px;
+            }
+
+        }
+
+        #obligatoire {
+            color: $third;
+            font-size: 0.80em;
+        }
+
+        #btnFormEnvoyer {
+            display: flex;
+            width: 100px;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 10px 25px 10px 25px;
+            border: 1px solid transparent;
+            border-radius: 50px;
+            background-color: $second;
+            color: $black;
+            font-weight: 500;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                border: 1px solid $third;
+                background-color: transparent;
+                color: $third;
+            }
+        }
+    }
+}
