@@ -1,0 +1,27 @@
+.footer {
+    width: 100%;
+    height: 10vh;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .footerBody {
+        width: 50%;
+        font-size: 0.85em;
+        font-weight: 500;
+        color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a {
+            color: $black;
+
+            :hover {
+                transform: scale(1.1);
+                color: $first;
+            }
+        }
+    }
+}

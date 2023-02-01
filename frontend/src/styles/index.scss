@@ -2,6 +2,22 @@
 @import "./reset.scss";
 
 // --- pages ---
-@import "./pages/home.scss";
+@import "./home.scss";
 
 // --- components ---
+
+// --- header ---
+@import "../components/header/styles/header.scss";
+@import "../components/header/styles/navbar.scss";
+
+// --- footer ---
+@import "../components/footer/styles/footer.scss";
+
+// --- profil ---
+@import "../components/profil/styles/profil.scss";
+
+// --- portfolio ---
+@import "../components/portfolio/styles/projects.scss";
+
+// --- contact ---
+@import "../components/contactForm/styles/contactForm.scss";
