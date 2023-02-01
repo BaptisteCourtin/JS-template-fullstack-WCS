@@ -1,0 +1,43 @@
+.profil {
+    background-color: $black;
+    color: $white;
+    width: 100%;
+    padding: 50px 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $text;
+
+    .profilCard {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+
+        .cardRight {
+            display: flex;
+            flex-direction: column;
+
+
+            gap: 40px;
+
+            h3 {
+                margin-top: 20px;
+                font-size: $h3;
+                font-family: $title;
+            }
+
+            p {
+                line-height: 1.5em;
+            }
+        }
+
+        .cardLeft {
+            img {
+                width: 125%;
+                border-radius: 50%;
+                border: dotted 3px $first;
+            }
+        }
+    }
+}

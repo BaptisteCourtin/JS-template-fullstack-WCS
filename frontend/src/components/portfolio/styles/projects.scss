@@ -1,13 +1,15 @@
 .projects {
-    width: 100%;
-    height: 60vh;
     background-color: $black;
     color: $white;
+    width: 100%;
+    padding: 0px 250px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
     h3 {
+        margin-top: 20px;
         font-size: $h3;
-        margin: 40px;
     }
+
 }
