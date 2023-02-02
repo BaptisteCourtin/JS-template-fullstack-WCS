@@ -32,9 +32,7 @@ const postProject = async (req) => {
 };
 
 const deleteProjectById = async (req) => {
-  const { id } = req.params;
-
-  const [result] = await database.query("DELETE FROM projet WHERE id=?", [id]);
+  const [result] = await database.query("DELETE FROM projet WHERE id = ?", [req.params.id]);
   return result;
 };
 

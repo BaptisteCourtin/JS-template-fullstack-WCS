@@ -32,11 +32,7 @@ const postProject = async (req, res) => {
 
 const deleteProjectById = async (req, res) => {
   const result = await projectModels.deleteProjectById(req);
-  if (result.affectedRows === 0) {
-    res.sendStatus(404);
-  } else {
-    res.sendStatus(204);
-  }
+  return res.json(result);
 };
 
 module.exports = {

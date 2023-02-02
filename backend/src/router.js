@@ -32,5 +32,4 @@ router.delete("/projet/delete/:id", project.deleteProjectById);
 
 router.delete("/profil/delete/:id", profil.deleteProfilById);
 
-
 module.exports = router;
