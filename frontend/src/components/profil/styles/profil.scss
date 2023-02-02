@@ -14,29 +14,38 @@
         justify-content: space-between;
         gap: 50px;
 
-        .cardRight {
+        li {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .cardRight {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
 
 
-            gap: 40px;
+                gap: 40px;
 
-            h3 {
-                margin-top: 20px;
-                font-size: $h3;
-                font-family: $title;
+                h3 {
+                    margin-top: 20px;
+                    font-size: $h3;
+                    font-family: $title;
+                }
+
+                p {
+                    line-height: 1.5em;
+                }
             }
 
-            p {
-                line-height: 1.5em;
-            }
-        }
+            .cardLeft {
+                width: 40%;
 
-        .cardLeft {
-            img {
-                width: 125%;
-                border-radius: 50%;
-                border: dotted 3px $first;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                    border: dotted 3px $first;
+                }
             }
         }
     }

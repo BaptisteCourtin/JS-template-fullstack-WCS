@@ -1,13 +1,19 @@
 .projectCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     li {
         list-style: none;
+        margin: 30px;
 
         .cardContainer {
-            width: 700px;
-            min-height: 300px;
+            width: 1000px;
+            min-height: 250px;
             border: solid 3px $second;
             border-radius: 2%;
-            padding: 30px;
+            padding: 10px;
 
 
             .cardBody {
@@ -15,10 +21,21 @@
                 width: 100%;
 
                 .cardBodyRight {
+                    padding: 20px;
                     width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 100%;
+
+                    }
                 }
 
                 .cardBodyLeft {
+                    padding: 20px;
                     width: 60%;
                     display: flex;
                     flex-direction: column;
@@ -26,6 +43,20 @@
 
                     h4 {
                         font-size: $h4;
+                    }
+
+                    span {
+                        a {
+                            text-decoration: none;
+                            color: $second;
+                            font-size: 1.15em;
+                            font-weight: 600;
+
+                        }
+
+                        :hover {
+                            color: $third;
+                        }
                     }
                 }
             }

@@ -1,18 +1,33 @@
 const express = require("express");
 
 const router = express.Router();
-// const database = require("../database"); // si besoin
 
-const project = require("./controllers/project.controllers");
 // ajouter les controllers ICI
+const project = require("./controllers/project.controllers");
+const profil = require("./controllers/profil.controllers");
 
+
+// --- GET ---
 router.get("/projets", project.getAllProjects);
-router.get("/projets/:id", project.getProjectById);
+router.get("/projet/:id", project.getProjectById);
 
+router.get("/profils", profil.getAllProfils);
+router.get("/profil/:id", profil.getProfilById);
+
+// --- POST ---
 router.post("/projet/new", project.postProject);
 
-router.put("/projet/:id", project.updateProjectById);
+router.post("/profil/new", profil.postProfil);
 
-router.delete("/projet/:id", project.deleteProjectById);
+// --- PUT ---
+router.put("/projet/update/:id", project.updateProjectById);
+
+router.put("/profil/update/:id", profil.updateProfilById);
+
+// --- DELETE ---
+router.delete("/projet/delete/:id", project.deleteProjectById);
+
+router.delete("/profil/delete/:id", profil.deleteProfilById);
+
 
 module.exports = router;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const ProjectCard = ({ data }) => {
     return (
@@ -9,12 +10,12 @@ const ProjectCard = ({ data }) => {
                         <div className="cardContainer">
                             <div className="cardBody">
                                 <div className="cardBodyRight">
-                                    <img src="" alt="screenshot du site réalisé" />
+                                    <img src={element.photo} alt="screenshot du site réalisé" />
                                 </div>
                                 <div className="cardBodyLeft">
                                     <h4>{element.nom}</h4>
                                     <p>{element.description}</p>
-                                    <p>{element.lien}</p>
+                                    <span><NavLink to={element.lien}>{element.lien}</NavLink></span>
 
                                 </div>
                             </div>
