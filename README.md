@@ -1,7 +1,6 @@
-## Concept
+## Checkpoint 4
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+My checkpoint application! 
 
 ## Setup & Use
 
@@ -11,6 +10,9 @@ It's pre-configured with a set of tools which'll help students produce industry-
 - Clone this repo, enter it
 - Run command `npm run setup`
 - _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+- _NB: To launch the frontend, you'll need an environment file with database credentials. You'll find a template one in `frontend/.env.sample`_
+- Run command `npm run migrate`
+- Run command `npm run dev` to start the project, Enjoy !
 
 ### Available Commands
 
