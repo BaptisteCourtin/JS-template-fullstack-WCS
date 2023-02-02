@@ -22,6 +22,10 @@ const migrate = async () => {
 
   await connection.query(sql);
 
+  const sql2 = fs.readFileSync("./insertDB.sql", "utf8");
+
+  await connection.query(sql2);
+
   connection.end();
 };
 
