@@ -2,6 +2,7 @@
     background-color: $black;
     color: $white;
     width: 100%;
+    min-height: 89vh;
     padding: 50px 250px;
     display: flex;
     flex-direction: column;
@@ -23,29 +24,121 @@
                 width: 60%;
                 display: flex;
                 flex-direction: column;
-
-
                 gap: 40px;
 
                 h3 {
                     margin-top: 20px;
-                    font-size: $h3;
+                    font-size: $h2;
                     font-family: $title;
-                }
+                    animation: slideInLeft 1s ease-in;
 
-                p {
-                    line-height: 1.5em;
+                    #gradient-text-anime {
+                        background: linear-gradient(-45deg, $third, $fourth, $third, $fourth);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-size: 400% 400%;
+                        -webkit-animation: gradient 3s ease infinite;
+                        animation: gradient 3s ease infinite;
+                    }
+
+                    @keyframes gradient {
+                        0% {
+                            background-position: 0% 50%;
+                        }
+
+                        50% {
+                            background-position: 100% 50%;
+                        }
+
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                    }
                 }
             }
+        }
 
-            .cardLeft {
-                width: 40%;
+        p {
+            line-height: 1.5em;
+            font-size: $h4;
+            animation: slideInLeft 1.2s ease-in-out;
 
-                img {
-                    width: 100%;
-                    border-radius: 50%;
-                    border: dotted 3px $first;
-                }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-1200px);
+            }
+
+            20% {
+                transform: translateX(-1200px);
+            }
+
+            40% {
+                transform: translateX(30px);
+
+            }
+
+            50% {
+                transform: translateX(0px);
+
+            }
+
+            60% {
+                transform: translateX(15px);
+            }
+
+            80% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .cardLeft {
+        animation: slideInRight 1s ease-out;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+            border: dotted 3px $first;
+        }
+
+        @keyframes slideInRight {
+            0% {
+                transform: translateX(2000px);
+            }
+
+
+            20% {
+                transform: translateX(2000px);
+            }
+
+            40% {
+                transform: translateX(-50px);
+
+            }
+
+            50% {
+                transform: translateX(0px);
+
+            }
+
+            60% {
+                transform: translateX(-25px);
+            }
+
+            80% {
+                transform: translateX(0);
+
+            }
+
+            100% {
+                transform: translateX(0);
             }
         }
     }

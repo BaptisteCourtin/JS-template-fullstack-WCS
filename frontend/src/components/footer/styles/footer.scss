@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-around;
 
-    .footerBody {
+    &__list {
         width: 50%;
         font-size: 0.90em;
         font-weight: 600;
@@ -14,14 +14,38 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+    }
 
-        a {
-            color: $black;
+    &__item {
+        width: 200px;
+        text-align: center;
+        color: $black;
+        transition: all 0.3s ease;
+        cursor: pointer;
 
+        .footer__text {
+            display: inline;
         }
 
-        :hover {
-            color: $third;
+        &:hover {
+            .footer__text {
+                display: none;
+            }
+
+            .footer__icon {
+                display: inline;
+                color: $second;
+            }
         }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $black;
+        transition: all 0.3s ease;
+    }
+
+    &__icon {
+        display: none;
     }
 }

@@ -8,17 +8,16 @@ const ProjectCard = ({ data }) => {
                 data.map((element) => (
                     <li key={element.id}>
                         <div className="cardContainer">
-                            <div className="cardBody">
-                                <div className="cardBodyRight">
-                                    <img src={element.photo} alt="screenshot du site réalisé" />
-                                </div>
-                                <div className="cardBodyLeft">
-                                    <h4>{element.nom}</h4>
-                                    <p>{element.description}</p>
-                                    <span><NavLink to={element.lien}>{element.lien}</NavLink></span>
 
-                                </div>
+                            <img src={element.photo} alt="screenshot du site réalisé" />
+
+                            <div className="cardBody">
+                                <h4>{element.nom}</h4>
+                                <p>{element.description}</p>
+                                <NavLink to={element.lien} type="button">Visit Project</NavLink>
+
                             </div>
+
                             <div className="cardBodyFooter"></div>
                         </div>
                     </li>))}

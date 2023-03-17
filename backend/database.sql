@@ -29,7 +29,7 @@ CREATE TABLE
         `id` INT NOT NULL AUTO_INCREMENT,
         `nom` VARCHAR(45) NOT NULL,
         `prenom` VARCHAR(45) NOT NULL,
-        `bio` VARCHAR(45) NOT NULL,
+        `bio` TEXT NOT NULL,
         `photo` VARCHAR(45),
         PRIMARY KEY (`id`),
         UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE
@@ -85,4 +85,3 @@ CREATE TABLE
         CONSTRAINT `id_projet` FOREIGN KEY (`id_projet`) REFERENCES `checkpoint4`.`projet` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
         CONSTRAINT `id_techno` FOREIGN KEY (`id_techno`) REFERENCES `checkpoint4`.`techno` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
     ) ENGINE = InnoDB;
-
