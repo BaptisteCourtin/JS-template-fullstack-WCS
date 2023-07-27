@@ -85,3 +85,4 @@ CREATE TABLE
         CONSTRAINT `id_projet` FOREIGN KEY (`id_projet`) REFERENCES `checkpoint4`.`projet` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
         CONSTRAINT `id_techno` FOREIGN KEY (`id_techno`) REFERENCES `checkpoint4`.`techno` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
     ) ENGINE = InnoDB;
+
